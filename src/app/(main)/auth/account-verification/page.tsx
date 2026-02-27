@@ -130,49 +130,49 @@ export default function VerificationPage() {
   }
 
   // Error state
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-red-900 via-slate-900 to-black flex items-center justify-center p-4">
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-            <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg
-                className="w-8 h-8 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l6 6"
-                />
-              </svg>
-            </div>
-            <h1 className="text-3xl font-bold text-white mb-4">
-              Verification Failed
-            </h1>
-            <p className="text-gray-300 mb-6">{error}</p>
-            <div className="space-y-4">
-              <Link
-                href="/auth/register"
-                className="bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium transition-colors inline-block"
-              >
-                Back to Register
-              </Link>
-              <Link
-                href="/auth/login"
-                className="bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors inline-block"
-              >
-                Try Login
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className="min-h-screen bg-gradient-to-br from-red-900 via-slate-900 to-black flex items-center justify-center p-4">
+  //       <div className="text-center">
+  //         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+  //           <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+  //             <svg
+  //               className="w-8 h-8 text-white"
+  //               fill="none"
+  //               stroke="currentColor"
+  //               viewBox="0 0 24 24"
+  //             >
+  //               <path
+  //                 strokeLinecap="round"
+  //                 strokeLinejoin="round"
+  //                 strokeWidth={2}
+  //                 d="M6 18L18 6M6 6l6 6"
+  //               />
+  //             </svg>
+  //           </div>
+  //           <h1 className="text-3xl font-bold text-white mb-4">
+  //             Verification Failed
+  //           </h1>
+  //           <p className="text-gray-300 mb-6">{error}</p>
+  //           <div className="space-y-4">
+  //             <Link
+  //               href="/auth/register"
+  //               className="bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium transition-colors inline-block"
+  //             >
+  //               Back to Register
+  //             </Link>
+  //             <Link
+  //               href="/auth/login"
+  //               className="bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors inline-block"
+  //             >
+  //               Try Login
+  //             </Link>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // Initial state - show verification prompt
   return (
