@@ -1,0 +1,31 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH into EC2 and deploy frontend
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+
+            echo "📦 Updating frontend source..."
+            cd ~/moviehub-app/moviehub-fe
+            git fetch origin
+            git reset --hard origin/master
+
+            echo "🐳 Rebuilding frontend container..."
+            cd ~/moviehub-app
+            docker compose up -d --build frontend
+
+            echo "✅ Frontend deployed successfully!"
