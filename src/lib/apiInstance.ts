@@ -1,7 +1,9 @@
 import axios, { AxiosError } from "axios";
 
+import { API_ROOT } from "@/utils/constants";
+
 const apiInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8017/v1",
+  baseURL: API_ROOT,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
