@@ -8,8 +8,9 @@ Built with React / Next.js + TailwindCSS.
 - React / Next.js
 - Tailwind CSS
 - Axios
-- JWT Auth
 - Docker
+- AWS EC2
+- Caddy (Reverse Proxy)
 
 ## ⚙️ Environment Variables
 
